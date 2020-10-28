@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.row {
+			display: flex;
+		}
+		.box1 {
+			background: orange;
+			height: 300px;
+			width: 200px;
+			margin-top: -15px;
+			margin-left: -15px;
+		}
+		.centre {
+			text-align: center;
+		}
+		.apple {
+			position: absolute;
+			left: 460px;
+			top: 220px;
+			height: 30px;
+			width: 30px;
+		}
+		.mushroom {
+			position: absolute;
+			left: 360px;
+			top: 800px;
+			height: 30px;
+			width: 30px;
+		}
+		.butterfly {
+			position: absolute;
+			left: 830px;
+			top: 250px;
+			height: 30px;
+			width: 30px;
+		}
+		.bear {
+			position: absolute;
+			left: 1005px;
+			top: 790px;
+			height: 30px;
+			width: 30px;
+		}
+		.win {
+			display:  none;
+		}
+	</style>
+</head>
+<body class="box" style="background-image: url(dom.jpg);  background-size: 100%;" class="row">
+	<div class="box1">
+		<h2 class="centre">Найди:</h2>
+		<h3 class="centre"><span class="aple">1.Яблоко</span></h3>
+		<h3 class="centre"><span class="mushrom">2.Гриб</span></h3>
+		<h3 class="centre"><span class="buterfly">3.Бабочка</span></h3>
+		<h3 class="centre"><span class="biar">4.Медведь</span></h3>
+		<h1 class="centre">Очки: <span class="score"></span></h1>
+		<div>
+			<img class="apple" src="aple.jpg">
+		</div>
+		<div>
+			<img class="mushroom" src="b=grib.png">
+		</div>
+		<div>
+			<img class="butterfly" src="babochka.png">
+		</div>
+		<div>
+			<img class="bear" src="vinni-pukh.png">
+		</div>
+	</div>
+	<div class="win">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<script type="text/javascript">
+		//apple
+		let number = 0;
+		document.querySelector('.score').innerHTML = number;
+		document.querySelector('.apple').onclick = function() {
+			alert('+очко');
+			number = number + 1;
+			document.querySelector(".score").innerHTML = number;
+			document.querySelector(".apple").style.display = "none";
+			document.querySelector(".aple").style.display = "none";
+			document.querySelector(".box1").style.height = "240px";
+			if (score == 4) {
+				document.querySelector(".box").style.display = 'none';
+				document.querySelector(".win").style.display = 'block';
+			}
+		}
+		//mushroom
+		document.querySelector('.mushroom').onclick = function() {
+			alert('+очко');
+			number = number + 1;
+			document.querySelector(".score").innerHTML = number;
+			document.querySelector(".mushroom").style.display = "none";
+			document.querySelector(".mushrom").style.display = "none";
+			document.querySelector(".box1").style.height = "200px";
+			if (score == 4) {
+				document.querySelector(".box").style.display = 'none';
+				document.querySelector(".win").style.display = 'block';
+			}
+		}
+		//butterfly
+		document.querySelector('.butterfly').onclick = function() {
+			alert('+очко');
+			document.querySelector(".score").innerHTML = number;
+			number = number + 1;
+			document.querySelector(".score").innerHTML = number;
+			document.querySelector(".butterfly").style.display = "none";
+			document.querySelector(".buterfly").style.display = "none";
+			document.querySelector(".box1").style.height = "160px";
+			if (score == 4) {
+				document.querySelector(".box").style.display = 'none';
+				document.querySelector(".win").style.display = 'block';
+			}
+		}
+		//bear
+		document.querySelector('.bear').onclick = function() {
+			alert('+очко');
+			document.querySelector(".score").innerHTML = number;
+			number = number + 1;
+			document.querySelector(".score").innerHTML = number;
+			document.querySelector(".bear").style.display = "none";
+			document.querySelector(".biar").style.display = "none";
+			document.querySelector(".box").style.height = "120px";
+			if (score == 4) {
+				document.querySelector(".box1").style.display = 'none';
+				document.querySelector(".win").style.display = 'block';
+			}
+		}
+	</script>
+</body>
+</html>
